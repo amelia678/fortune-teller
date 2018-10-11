@@ -6,7 +6,7 @@ html, body {
 
 }
 body {
-    background-color: cornflowerblue;
+    background-color: mediumorchid;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

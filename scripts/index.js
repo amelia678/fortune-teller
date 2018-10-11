@@ -7,11 +7,26 @@ const triggerElement = document.querySelector('[data-trigger]');
 const outputElement = document.querySelector('[data-output]');
 
 const fortunes = [
-    "You will be hungry again in one hour",
-    "I wish things had ended differently",
-    "Even a broken clock is right two times a day",
-    "Your resemblence to a muppet will prevent the world from taking you seriously",
-    "Never gonna give you up, never gonna let you down, never gonna run around and dessert you"
+    { 
+        text: "You will be hungry again in one hour" ,
+        url: "https://images.pexels.com/photos/100733/pexels-photo-100733.jpeg?cs=srgb&dl=alarm-clock-clock-macro-100733.jpg&fm=jpg"
+    },
+   { 
+       text: "I wish things had ended differently",
+        url: "https://images.pexels.com/photos/127028/pexels-photo-127028.jpeg?cs=srgb&dl=adorable-animal-cat-127028.jpg&fm=jpg"
+    },
+    {
+        text: "Even a broken clock is right two times a day",
+        url: "https://images.pexels.com/photos/707676/pexels-photo-707676.jpeg?cs=srgb&dl=black-and-white-black-and-white-clocks-707676.jpg&fm=jpg"
+    },
+    {
+        text: "Your resemblence to a muppet will prevent the world from taking you seriously",
+        url: "https://images.pexels.com/photos/208166/pexels-photo-208166.jpeg?cs=srgb&dl=baby-blur-cat-208166.jpg&fm=jpg"
+    },    
+    {
+        text: "Never gonna give you up, never gonna let you down, never gonna run around and dessert you",
+        url: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?cs=srgb&dl=adorable-animal-breed-1108099.jpg&fm=jpg"
+    }
 ];
 
 
