@@ -13,6 +13,10 @@ const fortunes = [
     "Your resemblence to a muppet will prevent the world from taking you seriously",
     "Never gonna give you up, never gonna let you down, never gonna run around and dessert you"
 ];
+
+
+
+let index = 0;
 // function hello() {
 //     ;
 // } if function will only be used once, ok to use anonymous function
@@ -22,9 +26,39 @@ const fortunes = [
 //  -a function that says what to do when the event happens
 triggerElement.addEventListener('click', function () {
     console.log('Hello addEventListener!');
-    outputElement.textContent = fortunes.pop();
+    const newFortune = fortunes[index];
     outputElement.textContent= newFortune;
-});    
+    index++;
+    if (index > fortunes.length - 1) {
+        index = 0;
+    }
+    
+    
+});   
+
+const triggerElement2 = document.querySelector('[data-trigger2]');
+const outputElement2 = document.querySelector('[data-output]');
+
+const proTips = [
+    "Save money on Christmas presents by discussing politics on social media",
+    "If somebody you know has a weird laugh, tell them so they know not to laugh again",
+    "Speak twice before you think",
+    "If you can't think of a word, say I forget the English word for it. That way people will think you're bilingual instead of an idiot",
+    "If your car is making weird noises just turn the music volume up and will no longer be a problem",
+    "Slow blink every 3 seconds to effortlessly spread your sleep out through the day"
+
+];
+
+
+triggerElement2.addEventListener('click', function () {
+    console.log('Guten tag');
+    const newLifeTip = proTips[index];
+    outputElement.textContent = newLifeTip
+    index++;
+    if (index > proTips.length - 1) {
+        index = 0;
+    }
+});
 
 // #2 write some text to the page on button click
 
