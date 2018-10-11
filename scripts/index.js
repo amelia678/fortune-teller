@@ -23,6 +23,7 @@ const fortunes = [
 triggerElement.addEventListener('click', function () {
     console.log('Hello addEventListener!');
     outputElement.textContent = fortunes.pop();
+    outputElement.textContent= newFortune;
 });    
 
 // #2 write some text to the page on button click
