@@ -2,13 +2,17 @@ console.log('yep i am here');
 // classes are for CSS Styling
 // "data attributes" are for JS
 
+
+
 // #1 make some code run when i click the button
 const triggerElement = document.querySelector('[data-trigger]');
 const outputElement = document.querySelector('[data-output]');
+const outputElementimg = document.querySelector('[data-image]');                  
+
 
 const fortunes = [
     { 
-        text: "You will be hungry again in one hour" ,
+        text: "You will be hungry again in one hour" , 
         url: "https://images.pexels.com/photos/100733/pexels-photo-100733.jpeg?cs=srgb&dl=alarm-clock-clock-macro-100733.jpg&fm=jpg"
     },
    { 
@@ -32,6 +36,25 @@ const fortunes = [
 
 
 let index = 0;
+
+function createFortuneButton() {
+    const theButton = document.createElement('button');
+    theButton.textContent= 'Click here to ruin your day';
+    theButton.setAttribute('data-trigger', '');
+    return theButton;
+}
+
+function createButtonContainer() {
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('buttonContainer');
+
+    // const theButton = createFortuneButton();
+    // buttonContainer.appendChild(theButton);
+    buttonContainer.appendChild(createFortuneButton());
+    
+    
+    return buttonContainer;
+}
 // function hello() {
 //     ;
 // } if function will only be used once, ok to use anonymous function
@@ -43,7 +66,9 @@ let index = 0;
 triggerElement.addEventListener('click', function () {
     console.log('Hello addEventListener!');
     let newFortune = fortunes[Math.floor(Math.random()* fortunes.length)];
+    let newImage = fortunes[index].url
     outputElement.textContent= newFortune;
+    outputElementimg.textContent= newImage;
     index++;
     if (index > fortunes.length - 1) {
         index = 0;
@@ -56,13 +81,31 @@ const triggerElement2 = document.querySelector('[data-trigger2]');
 const outputElement2 = document.querySelector('[data-output]');
 
 const proTips = [
-    "Save money on Christmas presents by discussing politics on social media",
-    "If somebody you know has a weird laugh, tell them so they know not to laugh again",
-    "Speak twice before you think",
-    "If you can't think of a word, say 'I forget the English word for it'. That way people will think you're bilingual instead of an idiot",
-    "If your car is making weird noises just turn the music volume up and will no longer be a problem",
-    "Slow blink every 3 seconds to effortlessly spread your sleep out through the day"
-
+    {
+        text: "Save money on Christmas presents by discussing politics on social media",
+        url: "#"
+    },
+    {
+        text: "If somebody you know has a weird laugh, tell them so they know not to laugh again",
+        url: "#"
+    },
+    {
+        text: "Speak twice before you think",
+        url: "#"
+    },
+   {
+       text: "If you can't think of a word, say 'I forget the English word for it'. That way people will think you're bilingual instead of an idiot",
+       url: "#"
+    },
+       
+    {
+        text: "If your car is making weird noises just turn the music volume up and will no longer be a problem",
+        url: "#"
+    },
+    {
+    text: "Slow blink every 3 seconds to effortlessly spread your sleep out through the day",
+    url: "#"
+    }
 ];
 
 
